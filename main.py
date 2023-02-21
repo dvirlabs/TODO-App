@@ -13,7 +13,6 @@ script_dir = os.path.dirname(__file__)
 st_abs_file_path = os.path.join(script_dir, "static/")
 app.mount("/static", StaticFiles(directory=st_abs_file_path), name="static")
 
-
 @app.get("/")
 async def index():
     return FileResponse("index.html")
@@ -32,7 +31,7 @@ async def get_result():
 
 
 @app.post("/add_row")
-async def insert_row_to_table(row : dict):
+async def insert_row_to_table(row:dict):
   
   # Run a query and fetch the results using the `get_data` function
   query = "INSERT INTO tasks (task , status) VALUES ('"+ row['task'] +"','"+ row['status']+"')"
@@ -46,10 +45,11 @@ async def insert_row_to_table(row : dict):
 
 
 
-# @app.delete("/delete_row")
-# async def delete_row_from_table(row : dict):
-#   query = "DELETE FROM tasks WHERE id = 
-
+@app.delete("/delete_row/{idNum}")
+async def delete_row_from_table(idNum:int):
+  query = "DELETE FROM tasks WHERE id =" + str(idNum)
+  results = set_data(query)
+  return {"results": results}
 
 
 
