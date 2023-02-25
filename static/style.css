@@ -1,77 +1,117 @@
-:root{
-    --background-color: rgb(230, 238, 228) ;
-    --text-color: #333333;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap');
+.background_div{
+    background: linear-gradient(#E1E7EB,#C4C9D5);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-
-body.dark-mode{
-    --background-color: #333333;
-    --text-color: #ffffff ;
+.center_window{
+    position: relative;
+    background-color: rgb(255 255 255 / 50%);
+    width: 90%;
+    border-radius: 0.5em;
+    height: 90%;
 }
-
-body{
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-#theme-btn{
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(214, 34, 34);
-    color: #ffffff;
-    border: 10px;
-    cursor: pointer;
-}
-
 #div-theme-btn{
-    margin-left: 90%;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 3.7em;
+    padding-right: 1em;
 }
-
-#pageTitle{
-    text-align: center;
-}
-
-#pg_table{
-    margin: auto;
-    margin-top: 5%;
-    width: 30%;
-    height: auto;
-    border: 7px solid rgb(95, 197, 117);
-    border-radius: 25px;
-    padding: 10px;
-}
-
-th{
-    font-size: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-td{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: 2px solid rgb(95, 197, 117);
-    border-radius: 25px;
-    text-align: center;
-}
-
-td:hover{
-    background-color:bisque;color:green;
-}
-
-#div-add-btn{
-    margin-left: 63%;
-    margin-top: 3%;
-}
-
-#add-btn{
-    padding: 0.5rem 1rem;
-    background-color: transparent;
-    border: transparent;
+#theme-btn{
+    font-family: 'Manrope';
+    background-color: white;
     border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    border-radius: 100vmin;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    padding: 5px 25px;
+    justify-content: flex-end;
+    width: max-content;
+}
+#theme-btn > svg{
+    height: 1.1em;
+    margin-right: 0.2em;
 }
 
-#add-btn:hover{
-    transform: scale(1.1);
+.main_page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 70%;
+    align-items: center;
+    padding: 0.5em;
+}
+
+/* inside window */
+.left_side{
+    width: 30%;
+    border-right: 2px solid #707070;
+}
+.right_side{
+    width: 70%;
+}
+.left_side , .right_side{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left_side > h1{
+    font-family: 'Manrope';
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.right_side > h1{
+    font-family: 'Manrope';
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+#div_pg_table{
+    background-color: white;
+    height: 80%;
+    width: 70%;
+    border-radius: 0.3em;
+    box-shadow: 0px 0px 4px #00000069;
+}
+
+/* bottom_buttons */
+.bottom_buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2em;
+}
+.bottom_buttons > button{
+    font-family: 'Manrope';
+    border-radius: 100vmin;
+    height: 2.7em;
+    width: 2.7em;
+    margin: 0.5em;
+}
+#add-btn{
+    background: url(../images/plus.svg);
+    background-size: 1.3em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000000;
+}
+#clear-table_but{
+    background: url(../images/clear.svg);
+    background-size: 1.3em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000000;
 }
