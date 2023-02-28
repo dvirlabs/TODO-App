@@ -4,8 +4,8 @@ import psycopg2.extras
 
 # Connect to the PostgreSQL database
 conn = psycopg2.connect(
-    host="5.29.128.192",
-    port="1010",
+    host="localhost",
+    port="5432",
     database="TODO-DB",
     user="python",
     password="lab1234"
