@@ -12,7 +12,7 @@ function onLoad() {
             $('<tr>').append(
               $('<td class="task_id">').text("#"+row.id.toString()),
               $('<td class="task_data">').text(row.task),
-              $('<td> class="task_status"').text(row.status)
+              $('<td class="task_status">').text(row.status)
             )
           );
         });

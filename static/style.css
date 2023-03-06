@@ -212,7 +212,7 @@ body{
     font-family: 'Manrope';
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0.5em;
     background-color: var(--task_backgruond_color);
     border: 2px solid var(--task_border_color);
