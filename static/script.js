@@ -10,9 +10,9 @@ function onLoad() {
         $.each(data.results, function(index, row) {
           table.append(
             $('<tr>').append(
-              $('<td>').text(row.id),
-              $('<td>').text(row.task),
-              $('<td>').text(row.status)
+              $('<td class="task_id">').text("#"+row.id.toString()),
+              $('<td class="task_data">').text(row.task),
+              $('<td> class="task_status"').text(row.status)
             )
           );
         });
@@ -34,16 +34,15 @@ function onLoad() {
     if(theam == "light"){
       body.classList.toggle("dark_mode");
       theam_but_text.innerHTML = "Dark";
-      theam_but_image.src = "./images/moon.svg"
+      theam_but_image.src = "./static/images/moon.svg"
       theam = "dark";
     }
     else if(theam == "dark"){
       body.classList.toggle("dark_mode");
       theam_but_text.innerHTML = "Light";
-      theam_but_image.src = "./images/light.svg"
+      theam_but_image.src = "./static/images/light.svg"
       theam = "light";
     }
-    console.log(theam)
   }
   
   
